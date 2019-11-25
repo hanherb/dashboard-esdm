@@ -22,5 +22,4 @@ yarn-error.log*
 *.sw*
 
 # Project specific
-src/assets/images
 src/scss

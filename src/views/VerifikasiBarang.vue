@@ -123,6 +123,7 @@ export default {
                       for(var l = 0; l < barang1.length; l++) {
                         for(var m = 0; m < barang2.length; m++) {
                           if(barang1[l] == barang2[m]) {
+                          	console.log(barang1[l])
                             this.belanjaBarang.push({
                               "nama": response.data[i].data[j]["Jenis Barang"],
                               "kategori": kategori,

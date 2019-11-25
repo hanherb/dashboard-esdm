@@ -91,9 +91,9 @@ export default {
               		this.commerces.push(result.commerces[i]);
             	}
       		}
+      		if(cb)
+          		return cb();
         });
-        if(cb)
-          return cb();
       });
     },
     fetchBelanjaBarang() {

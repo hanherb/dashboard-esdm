@@ -85,20 +85,12 @@ export default {
       this.axios.get(address + ":3000/get-commerce", headers).then((response) => {
         let query = gql.allCommerce;
         graphqlFunction.graphqlFetchAll(query, (result) => {
-          if(this.$session.get('user').role == "supplier") {
-            for(var i = 0; i < result.commerces.length; i++) {
-              if(result.commerces[i].user == this.$session.get('user').fullname) {
-                result.commerces[i].price = basicFunction.numberWithCommas(result.commerces[i].price);
-                this.commerces.push(result.commerces[i]);
-              }
-            }
-          }
-          else if(this.$session.get('user').role == "admin") {
-            for(var i = 0; i < result.commerces.length; i++) {
-              result.commerces[i].price = basicFunction.numberWithCommas(result.commerces[i].price);
-              this.commerces.push(result.commerces[i]);
-            }
-          }
+        	console.log(result);
+          	if(this.$session.get('user').role == "admin") {
+            	for(var i = 0; i < result.commerces.length; i++) {
+              		this.commerces.push(result.commerces[i]);
+            	}
+      		}
         });
         if(cb)
           return cb();

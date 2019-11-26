@@ -231,6 +231,7 @@ export default {
         }
 
         //mengisi tabel
+        console.log(temp)
         for(var i = 0; i < this.belanjaBarang.tableData.length; i++) {
           for(var j = 0; j < temp.length; j++) {
             if(temp[j]["tahun"] == filterTahun) {

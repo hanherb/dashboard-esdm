@@ -164,12 +164,12 @@ export default {
             var localExpenditure = 0;
             var kategori = response.data[i].data[0]["Jenis Barang"];
             for(var j = 0; j < response.data[i].data.length; j++) {
+              console.log(response.data[i].data[j])
               if(response.data[i].data[j]["Negara"]) {
                 impor += response.data[i].data[j]["Total Price (US$)"];
               }
               else if(response.data[i].data[j]["Produsen/Suplier"] == "Produsen") {
                 localContent += response.data[i].data[j]["Total Price (US$)"];
-                console.log(localContent)
               }
               else if(response.data[i].data[j]["Produsen/Suplier"] == "Suplier") {
                 localExpenditure += response.data[i].data[j]["Total Price (US$)"];

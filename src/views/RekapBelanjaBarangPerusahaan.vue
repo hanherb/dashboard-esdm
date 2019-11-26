@@ -169,6 +169,7 @@ export default {
               }
               else if(response.data[i].data[j]["Produsen/Suplier"] == "Produsen") {
                 localContent += response.data[i].data[j]["Total Price (US$)"];
+                console.log(localContent)
               }
               else if(response.data[i].data[j]["Produsen/Suplier"] == "Suplier") {
                 localExpenditure += response.data[i].data[j]["Total Price (US$)"];

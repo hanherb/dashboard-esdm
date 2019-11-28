@@ -281,7 +281,7 @@ export default {
           for(var i = 0; i < response.data.length; i++) {
             var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
             for(var j = 0; j < response.data[i].data.length; j++) {
-              var tahun = this.tahunLabaRugi[this.tahunLabaRugi.length-1];
+              var tahun = "2017";
               if(response.data[i].data[j]["URAIAN"] == "Penjualan") {
                 if(response.data[i].data[j]["REALISASI TAHUN " + tahun] == undefined) {
                   penjualan += 0;

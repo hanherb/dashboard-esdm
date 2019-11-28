@@ -1,4 +1,4 @@
-<template>
+u<template>
   <d-container fluid class="main-content-container px-4">
     <d-button-group size="small" class="d-inline-flex mb-3 mb-sm-0 ml-0" id="btn-group-filter">
       <a tag="button" class="btn btn-white active" id="totalAset" v-on:click="toggleCard($event.currentTarget.id)">Total Aset</a>
@@ -184,6 +184,7 @@ export default {
           var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
           for(var j = 0; j < response.data[i].data.length; j++) {
             var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
+            console.log(response.data[i].data[j])
             if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Lancar") {
               aktivaLancar += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
@@ -200,7 +201,6 @@ export default {
               ekuitas += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
           }
-          console.log(aktivaLancar)
           if(this.totalAset.length == 0) {
             this.totalAset.push({
               "komoditas": komoditas,

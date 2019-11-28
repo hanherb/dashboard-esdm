@@ -17,6 +17,7 @@
               <th>Nama Barang</th>
               <th class="text-center">Qty</th>
               <th class="text-center">Harga</th>
+              <th class="text-center">TKDN</th>
               <th class="text-center">Kategori</th>
               <th class="text-center">Spesifikasi</th>
               <th class="text-center">Negara Asal</th>
@@ -28,6 +29,7 @@
               <td class="lo-stats__total">{{ barang.nama }}</td>
               <td class="lo-stats__items text-center">{{ barang.qty }}</td>
               <td class="lo-stats__total text-center text-success">$ {{ barang.harga.toLocaleString() }}</td>
+              <td class="lo-stats__total text-center text-success">{{ barang.tkdn }} %</td>
               <td class="lo-stats__total text-center">{{ barang.kategori }}</td>
               <td class="lo-stats__total text-center">{{ barang.spesifikasi }}</td>
               <td class="lo-stats__total text-center">{{ barang.negara_asal }}</td>

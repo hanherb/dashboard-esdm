@@ -291,6 +291,7 @@ export default {
                   penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
                   console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
                 }
+                console.log(penjualan);
               }
               else if(response.data[i].data[j]["URAIAN"] == "Laba/ (Rugi) Bersih" || response.data[i].data[j]["URAIAN"] == "Laba/(Rugi) Bersih") {
                 labaBersih += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);

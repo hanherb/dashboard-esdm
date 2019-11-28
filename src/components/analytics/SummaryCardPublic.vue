@@ -285,8 +285,10 @@ export default {
             for(var j = 0; j < response.data[i].data.length; j++) {
               var tahun = this.tahunLabaRugi[this.tahunLabaRugi.length-1];
               if(response.data[i].data[j]["URAIAN"] == "Penjualan") {
-                penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
-                console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
+                if(typeof parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]) == "number") {
+                  penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
+                  console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
+                }
               }
               else if(response.data[i].data[j]["URAIAN"] == "Laba/ (Rugi) Bersih" || response.data[i].data[j]["URAIAN"] == "Laba/(Rugi) Bersih") {
                 labaBersih += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);

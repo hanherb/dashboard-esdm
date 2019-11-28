@@ -167,6 +167,7 @@ export default {
               }
             }
           }
+          console.log(this.tahunNeraca);
         }
         for(var i = 0; i < response.data.length; i++) {
           var keys = Object.keys(response.data[i].data[0]);

@@ -203,8 +203,6 @@ export default {
               ekuitas += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
           }
-          console.log(komoditas)
-          console.log(aktivaLancar)
           if(this.totalAset.length == 0) {
             this.totalAset.push({
               "komoditas": komoditas,
@@ -288,6 +286,7 @@ export default {
               var tahun = this.tahunLabaRugi[this.tahunLabaRugi.length-1];
               if(response.data[i].data[j]["URAIAN"] == "Penjualan") {
                 penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
+                console.log(penjualan)
               }
               else if(response.data[i].data[j]["URAIAN"] == "Laba/ (Rugi) Bersih" || response.data[i].data[j]["URAIAN"] == "Laba/(Rugi) Bersih") {
                 labaBersih += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);

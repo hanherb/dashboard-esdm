@@ -186,7 +186,7 @@ export default {
           console.log(response.data[i].komoditas);
           for(var j = 0; j < response.data[i].data.length; j++) {
             //var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
-            var tahun = "2018";
+            var tahun = "2017";
             if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Lancar") {
               aktivaLancar += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }

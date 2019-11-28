@@ -74,6 +74,7 @@ let query = {
 	      _id
 	      name
 	      price
+        tkdn
 	      qty
 	      description
 	      category
@@ -88,6 +89,7 @@ let query = {
 	      _id
 	      name
 	      price
+        tkdn
 	      qty
 	      description
 	      category

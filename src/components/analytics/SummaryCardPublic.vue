@@ -187,6 +187,8 @@ export default {
             console.log(response.data[i].data[j])
             if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Lancar") {
               aktivaLancar += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
+              console.log(tahun);
+              console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
             else if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Tidak Lancar") {
               aktivaTidakLancar += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);

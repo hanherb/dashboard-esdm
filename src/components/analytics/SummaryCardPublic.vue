@@ -300,8 +300,7 @@ export default {
               this.totalPenjualan.push({
                 "komoditas": komoditas,
                 "value": parseInt(penjualan)
-              });    
-              console.log(this.totalPenjualan);
+              });
             }
             else {
               for(var j = 0; j < this.totalPenjualan.length; j++) {
@@ -318,6 +317,7 @@ export default {
                 }
               }
             }
+            console.log(this.totalPenjualan);
             if(this.totalNPM.length == 0) {
               this.totalNPM.push({
                 "komoditas": komoditas,

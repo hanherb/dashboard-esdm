@@ -113,7 +113,7 @@ export default {
         for(var i = 0; i < response.data.length; i++) {
           if(response.data[i].upload_by == id) {
             if(response.data[i].data[0]["Tahun"] == this.tahun[this.tahun.length-1]) {
-              if(response.data[i].data[0]["Rencana/Realisasi"] == "Realisasi") {
+              if(response.data[i].data[0]["Rencana/Realisasi"] == "Realisasi" || response.data[i].data[0]["Rencana/Realisasi"] == "Rencana") {
                 var kategori = response.data[i].data[0]["Jenis Barang"];
                 for(var j = 0; j < response.data[i].data.length; j++) {
                   for(var k = 0; k < this.commerces.length; k++) {

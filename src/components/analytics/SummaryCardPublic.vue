@@ -200,6 +200,7 @@ export default {
               ekuitas += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
           }
+          console.log(aktivaLancar)
           if(this.totalAset.length == 0) {
             this.totalAset.push({
               "komoditas": komoditas,

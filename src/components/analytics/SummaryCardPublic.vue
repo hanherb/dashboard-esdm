@@ -182,6 +182,7 @@ export default {
           var ekuitas = 0;
           var totalAsetEksplorasi = 0;
           var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
+          console.log(response.data[i].komoditas);
           for(var j = 0; j < response.data[i].data.length; j++) {
             //var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
             var tahun = "2018";

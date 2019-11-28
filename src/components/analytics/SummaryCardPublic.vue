@@ -186,7 +186,6 @@ export default {
             //var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
             var tahun = "2018";
             if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Lancar") {
-              console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun])
               aktivaLancar += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
             else if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Tidak Lancar") {
@@ -202,6 +201,8 @@ export default {
               ekuitas += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
           }
+          console.log(komoditas)
+          console.log(aktivaLancar)
           if(this.totalAset.length == 0) {
             this.totalAset.push({
               "komoditas": komoditas,

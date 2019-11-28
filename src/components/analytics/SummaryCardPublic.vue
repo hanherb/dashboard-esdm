@@ -277,9 +277,9 @@ export default {
               }
             }
           }
+          var penjualan = 0;
+          var labaBersih = 0;
           for(var i = 0; i < response.data.length; i++) {
-            var penjualan = 0;
-            var labaBersih = 0;
             var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
             for(var j = 0; j < response.data[i].data.length; j++) {
               var tahun = this.tahunLabaRugi[this.tahunLabaRugi.length-1];

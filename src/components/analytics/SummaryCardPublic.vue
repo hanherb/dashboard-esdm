@@ -157,7 +157,6 @@ export default {
     },
     calculateSummary(cb) {
       this.axios.get(address + ":3000/get-neraca-public").then((response) => {
-        console.log(response.data)
         for(var i = 0; i < response.data.length; i++) {
           var keys = Object.keys(response.data[i].data[0]);
           for(var k = 0; k < keys.length; k++) {
@@ -289,7 +288,6 @@ export default {
                 }
                 else {
                   penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
-                  console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
                 }
                 console.log(penjualan);
               }
@@ -317,6 +315,7 @@ export default {
                   });
                   break;
                 }
+                console.log(this.totalPenjualan[j]);
               }
             }
             if(this.totalNPM.length == 0) {

@@ -301,6 +301,7 @@ export default {
             userId: id
           };
           graphqlFunction.graphqlFetchOne(query, variable, (result) => {
+            console.log(result);
             this.id = result.user._id;
             this.input.email = result.user.email;
             this.input.fullname = result.user.fullname;

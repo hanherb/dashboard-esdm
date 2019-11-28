@@ -160,7 +160,6 @@ export default {
         for(var i = 0; i < response.data.length; i++) {
           var keys = Object.keys(response.data[i].data[0]);
           for(var k = 0; k < keys.length; k++) {
-          console.log(keys[k])
             if(keys[k].split(' ')[0] == "REALISASI") {
               if(!this.tahunNeraca.includes(keys[k].split('REALISASI TAHUN ')[1])) {
                 this.tahunNeraca.push(keys[k].split('REALISASI TAHUN ')[1]);
@@ -185,8 +184,9 @@ export default {
           var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
           for(var j = 0; j < response.data[i].data.length; j++) {
             //var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
-            var tahun = 2018;
+            var tahun = "2018";
             if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Lancar") {
+              console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun])
               aktivaLancar += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
             else if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Tidak Lancar") {

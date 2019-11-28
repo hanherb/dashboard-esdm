@@ -289,7 +289,6 @@ export default {
                 else {
                   penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
                 }
-                console.log(penjualan);
               }
               else if(response.data[i].data[j]["URAIAN"] == "Laba/ (Rugi) Bersih" || response.data[i].data[j]["URAIAN"] == "Laba/(Rugi) Bersih") {
                 labaBersih += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
@@ -317,7 +316,6 @@ export default {
                 }
               }
             }
-            console.log(this.totalPenjualan);
             if(this.totalNPM.length == 0) {
               this.totalNPM.push({
                 "komoditas": komoditas,

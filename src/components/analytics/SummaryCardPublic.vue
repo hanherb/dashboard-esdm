@@ -183,7 +183,6 @@ export default {
           var ekuitas = 0;
           var totalAsetEksplorasi = 0;
           var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
-          console.log(response.data[i].komoditas);
           for(var j = 0; j < response.data[i].data.length; j++) {
             //var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
             var tahun = "2017";
@@ -285,7 +284,10 @@ export default {
             for(var j = 0; j < response.data[i].data.length; j++) {
               var tahun = this.tahunLabaRugi[this.tahunLabaRugi.length-1];
               if(response.data[i].data[j]["URAIAN"] == "Penjualan") {
-                if(typeof parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]) == "number") {
+                if(response.data[i].data[j]["REALISASI TAHUN " + tahun] == undefined) {
+                  penjualan += 0;
+                }
+                else {
                   penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
                   console.log(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
                 }

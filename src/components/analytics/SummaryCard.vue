@@ -179,7 +179,8 @@ export default {
           var totalAsetEksplorasi = 0;
           var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
           for(var j = 0; j < response.data[i].data.length; j++) {
-            var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
+            //var tahun = this.tahunNeraca[this.tahunNeraca.length-1];
+            var tahun = "2017";
             if(response.data[i].data[j]["URAIAN"] == "Jumlah Aktiva Lancar") {
               aktivaLancar += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
             }
@@ -276,7 +277,8 @@ export default {
             var labaBersih = 0;
             var komoditas = this.fetchKomoditasGroup(response.data[i].komoditas);
             for(var j = 0; j < response.data[i].data.length; j++) {
-              var tahun = this.tahunLabaRugi[this.tahunLabaRugi.length-1];
+              //var tahun = this.tahunLabaRugi[this.tahunLabaRugi.length-1];
+              var tahun = "2017";
               if(response.data[i].data[j]["URAIAN"] == "Penjualan") {
                 penjualan += parseInt(response.data[i].data[j]["REALISASI TAHUN " + tahun]);
               }

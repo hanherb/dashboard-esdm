@@ -19,6 +19,7 @@
               <th class="text-center">Status</th>
               <th class="text-center">Qty</th>
               <th class="text-center">Harga</th>
+              <th class="text-center">TKDN</th>
               <th class="text-center">Kategori</th>
               <th class="text-center">Spesifikasi</th>
             </tr>
@@ -38,6 +39,7 @@
               </td>
               <td class="lo-stats__items text-center">{{ commerce.qty }}</td>
               <td class="lo-stats__total text-center text-success">$ {{ commerce.price }}</td>
+              <td class="lo-stats__total text-center text-success">{{ commerce.tkdn }}%</td>
               <td class="lo-stats__total text-center">{{ commerce.category }}</td>
               <td class="lo-stats__total text-center">{{ commerce.description }}</td>
             </tr>
